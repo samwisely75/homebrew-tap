@@ -7,7 +7,7 @@ class Quot < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/samwisely75/quot/releases/download/v0.1.4/quot-macos-x64"
-      sha256 "PLACEHOLDER_X64_SHA256"
+      sha256 "8e381225e1dd4cd4d8cfbf3f42b1bbdfb3b71dfb96eeeeb6fc70f4876701c8de"
 
       def install
         bin.install "quot-macos-x64" => "quot"
@@ -15,7 +15,7 @@ class Quot < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/samwisely75/quot/releases/download/v0.1.4/quot-macos-arm64"
-      sha256 "PLACEHOLDER_ARM64_SHA256"
+      sha256 "d4929de12b2431a2222583dd156ecc45ff4021e0eb2523c715a2b6dc8e163e6f"
 
       def install
         bin.install "quot-macos-arm64" => "quot"
