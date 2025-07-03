@@ -1,17 +1,25 @@
 class Webly < Formula
   desc "A flexible HTTP client with profile support"
   homepage "https://github.com/samwisely75/webly"
-  url "https://github.com/samwisely75/webly/archive/refs/tags/v0.1.13.tar.gz"
-  sha256 ""
+  version "0.1.14"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/samwisely75/webly/releases/download/v0.1.14/webly-macos-arm64"
+      sha256 ""
+    end
+    on_intel do
+      url "https://github.com/samwisely75/webly/releases/download/v0.1.14/webly-macos-x64"
+      sha256 ""
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install Dir["*"].first => "webly"
   end
 
   test do
-    assert_match "webly #{VERSION}", shell_output("#{bin}/webly --version")
+    assert_match "webly #{version}", shell_output("#{bin}/webly --version")
   end
 end
