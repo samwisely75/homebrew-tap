@@ -1,16 +1,16 @@
 class Webly < Formula
   desc "A flexible HTTP client with profile support"
   homepage "https://github.com/samwisely75/webly"
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/samwisely75/webly/releases/download/v0.1.14/webly-macos-arm64"
+      url "https://github.com/samwisely75/webly/releases/download/v0.1.15/webly-macos-arm64"
       sha256 ""
     end
     on_intel do
-      url "https://github.com/samwisely75/webly/releases/download/v0.1.14/webly-macos-x64"
+      url "https://github.com/samwisely75/webly/releases/download/v0.1.15/webly-macos-x64"
       sha256 ""
     end
   end
